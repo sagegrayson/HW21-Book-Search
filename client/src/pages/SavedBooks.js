@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
+import React from "react";
 import {
 	Jumbotron,
 	Container,
@@ -18,7 +19,8 @@ import { REMOVE_BOOK } from "../utils/mutations";
 const SavedBooks = () => {
 	// const [userData, setUserData] = useState({});
 
-	const { loading, data } = useQuery(GET_ME);
+	// const { loading, data } = useQuery(GET_ME);
+	const { data } = useQuery(GET_ME);
 	const [deleteBook] = useMutation(REMOVE_BOOK);
 	const userData = data?.me || {};
 
